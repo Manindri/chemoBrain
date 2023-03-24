@@ -8,8 +8,11 @@ chemoBrain has four main functionalities.
  add information about patients in need of donations, and 
  add information about charities, organizations and clubs founded in order to help cancer patients.
 
- Group member details :-
- IT20246778 - N.M.M.C. Navaratne,
- IT20085858 - Swikkin M.L,
- IT20103040 - P.M.M. Pathirana,
- IT20252540 - D.M.R.B. Daswaththa
+ Group Member Details
+ * IT20246778 - N.M.M.C. Navaratne
+ 
+ * IT20085858 - Swikkin M.L
+ 
+ * IT20103040 - P.M.M. Pathirana
+ 
+ * IT20252540 - D.M.R.B. Daswaththa
