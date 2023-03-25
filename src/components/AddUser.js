@@ -41,6 +41,36 @@ export default function AddUser() {
             
     }
 
+    //Form Validation
+    const checkTextInput = () => {
+        //Check for the Name TextInput
+        if (!name.trim()) {
+            alert('Please Enter Your Name');
+            return;
+        }
+        //Check for the Email TextInput
+        if (!contact.trim()) {
+            alert('Please Enter Contact No');
+            return;
+        }
+        if (!dob.trim()) {
+            alert('Please Enter DOB');
+            return;
+        }
+        if (!email.trim()) {
+            alert('Please Enter Email');
+            return;
+        }
+        if (!password.trim()) {
+            alert('Please Enter Password');
+            return;
+        }
+        //Checked Successfully
+        //Do whatever you want
+        alert('Success');
+        onAddPress();
+    };
+
     return (
         <View style={styles.container}>
             <KeyboardAwareScrollView
@@ -69,7 +99,7 @@ export default function AddUser() {
                 
                 <TextInput
                     style={styles.inputName}
-                    placeholder='User Full Name'
+                    placeholder='Full Name'
                     placeholderTextColor="#aaaaaa"
                     onChangeText={(text) => setName(text)}
                     value={name}
@@ -116,7 +146,7 @@ export default function AddUser() {
                 />
                 <TouchableOpacity
                     style={styles.UpdateEventBtn}
-                    onPress={() => onAddPress()}>
+                    onPress={() => checkTextInput()}>
                     <Text style={styles.buttonTitle}>REGISTER</Text>
                 </TouchableOpacity>
                 </View>

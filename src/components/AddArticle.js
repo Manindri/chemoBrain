@@ -37,6 +37,32 @@ export default function AddArticle() {
 
     }
 
+    //Form Validation
+    const checkTextInput = () => {
+        //Check for the Name TextInput
+        if (!articleName.trim()) {
+            alert('Please Enter Article Name');
+            return;
+        }
+        //Check for the Email TextInput
+        if (!publishedDate.trim()) {
+            alert('Please Enter Published Date');
+            return;
+        }
+        if (!writtenBy.trim()) {
+            alert('Please Enter Written By');
+            return;
+        }
+        if (!content.trim()) {
+            alert('Please Enter Content');
+            return;
+        }
+        //Checked Successfully
+        //Do whatever you want
+        alert('Success');
+        onAddPress();
+    };
+
     return (
         <View style={styles.container}>
             <KeyboardAwareScrollView
@@ -103,7 +129,7 @@ export default function AddArticle() {
                     />
                     <TouchableOpacity
                         style={styles.button}
-                        onPress={() => onAddPress()}>
+                        onPress={() => checkTextInput()}>
                         <Text style={styles.buttonTitle}>ADD ARTICLE</Text>
                     </TouchableOpacity>
                     {/* <View style={styles.footerView}>

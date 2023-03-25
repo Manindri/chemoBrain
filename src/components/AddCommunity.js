@@ -41,6 +41,7 @@ export default function AddCommunity() {
 
     }
 
+    //Form Validation
     const checkTextInput = () => {
         //Check for the Name TextInput
         if (!communityName.trim()) {
@@ -71,6 +72,7 @@ export default function AddCommunity() {
         //Checked Successfully
         //Do whatever you want
         alert('Success');
+        onAddPress();
     };
 
 
@@ -158,7 +160,7 @@ export default function AddCommunity() {
                     />
                     <TouchableOpacity
                         style={styles.button}
-                        onPress={() => onAddPress() }>
+                        onPress={() => checkTextInput() }>
                         <Text style={styles.buttonTitle}>ADD COMMUNITY</Text>
                     </TouchableOpacity>
                     {/* <View style={styles.footerView}>

@@ -45,6 +45,7 @@ export default function AddDonate() {
 
     }
 
+    //Form Validation
     const checkTextInput = () => {
         //Check for the Name TextInput
         if (!patientName.trim()) {
@@ -83,6 +84,7 @@ export default function AddDonate() {
         //Checked Successfully
         //Do whatever you want
         alert('Success');
+        onAddPress();
     };
 
 
@@ -190,7 +192,7 @@ export default function AddDonate() {
                     />
                     <TouchableOpacity
                         style={styles.button}
-                        onPress={() => onAddPress() }>
+                        onPress={() => checkTextInput() }>
                         <Text style={styles.buttonTitle}>ADD DETAILS</Text>
                     </TouchableOpacity>
                     {/* <View style={styles.footerView}>

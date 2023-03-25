@@ -41,10 +41,11 @@ export default function AddEvent() {
 
     }
 
+    //Form Validation
     const checkTextInput = () => {
         //Check for the Name TextInput
         if (!eventName.trim()) {
-            alert('Please Enter EventName');
+            alert('Please Enter Event Name');
             return;
         }
         //Check for the Email TextInput
@@ -71,8 +72,14 @@ export default function AddEvent() {
         //Checked Successfully
         //Do whatever you want
         alert('Success');
+        onAddPress();
     };
 
+    // const functionCombined = () => {
+    //     checkTextInput();
+    //     onAddPress();
+    // }  
+    
 
     return (
         <View style={styles.container}>
@@ -157,7 +164,9 @@ export default function AddEvent() {
                     />
                     <TouchableOpacity
                         style={styles.button}
-                        onPress={() => onAddPress() }>
+                        onPress={() => checkTextInput() }
+                        // onPressIn={() => onAddPress()}
+                        >
                         <Text style={styles.buttonTitle}>ADD EVENT</Text>
                     </TouchableOpacity>
                     {/* <View style={styles.footerView}>
